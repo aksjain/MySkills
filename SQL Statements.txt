@@ -1,0 +1,22 @@
+CREATE DATABASE MySQLDB;
+
+USE MySQLDB;
+
+CREATE TABLE TUMESA
+(
+TuMesaId SMALLINT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+TuMesaDescription VARCHAR(50)
+);
+
+INSERT INTO TUMESA(TuMesaDescription) VALUES
+('Charger'),
+('PenDrive'),
+('Mobile'),
+('Laptop'),
+('Tablet');
+
+CREATE PROCEDURE DeleteTuMesaData
+AS
+   DELETE FROM TUMESA;
+
+EXEC DeleteTuMesaData;
